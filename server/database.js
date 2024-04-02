@@ -5,7 +5,7 @@ dotenv.config();
 
 // MongoDB connection URL
 const mongoUrl=process.env.REACT_APP_MONGODB_URL;
-const mongoURL = `${mongoUrl}/heliverse`;
+
 
 // MongoDB connection options
 const options = {
@@ -16,7 +16,7 @@ const options = {
 
 // Connecting to MongoDB
 const connectToMongoose=()=>{
-mongoose.connect(mongoURL, options)
+mongoose.connect(mongoUrl, options)
   .then(() => {
     console.log('MongoDB connected');
   })
