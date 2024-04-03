@@ -20,7 +20,7 @@ mongoose();
 const addMockData = async () => {
     try {
       const users = await USER.find({});
-      if(!users){
+      if(users){
       // Remove existing data from the collection
         await USER.deleteMany();
     
